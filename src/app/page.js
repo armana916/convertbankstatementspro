@@ -39,17 +39,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Trusted Logos */}
-      <section className="text-center py-10">
-        <h2 className="text-lg font-semibold text-gray-700">Trusted by professionals at</h2>
-        <div className="flex justify-center flex-wrap gap-10 mt-6">
-          <Image src="/bankofamerica.png" alt="Bank of America" width={100} height={32} />
-          <Image src="/quickbooks.png" alt="QuickBooks" width={100} height={32} />
-          <Image src="/xero.png" alt="Xero" width={100} height={32} />
-          <Image src="/chase.png" alt="Chase" width={100} height={32} />
-        </div>
-      </section>
-
+ 
       {/* Feature Icons in Cards */}
       <section className="bg-[#d2f1fc] py-16 px-6 md:px-20 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
         {[
