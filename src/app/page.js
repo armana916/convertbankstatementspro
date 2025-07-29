@@ -4,10 +4,10 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function HomePage() {
   const [file, setFile] = useState(null);
-
   const handleFileChange = (e) => setFile(e.target.files[0]);
 
   return (
@@ -39,7 +39,17 @@ export default function HomePage() {
         </div>
       </section>
 
- 
+      {/* Trusted Logos */}
+      <section className="text-center py-10">
+        <h2 className="text-lg font-semibold text-gray-700">Trusted by professionals at</h2>
+        <div className="flex justify-center flex-wrap gap-10 mt-6">
+          <Image src="/bankofamerica.png" alt="Bank of America" width={100} height={32} />
+          <Image src="/quickbooks.png" alt="QuickBooks" width={100} height={32} />
+          <Image src="/xero.png" alt="Xero" width={100} height={32} />
+          <Image src="/chase.png" alt="Chase" width={100} height={32} />
+        </div>
+      </section>
+
       {/* Feature Icons in Cards */}
       <section className="bg-[#d2f1fc] py-16 px-6 md:px-20 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
         {[
@@ -83,6 +93,50 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section className="bg-[#d2f1fc] py-20 px-4 md:px-20">
+        <h2 className="text-3xl font-extrabold text-center text-[#0b2239] mb-12">Simple, Transparent Pricing</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="bg-white rounded-lg shadow-md p-6 text-center">
+            <h3 className="text-[#e77945] font-bold text-lg mb-2">Free</h3>
+            <p className="text-sm text-gray-600 mb-4">Try it out with limited features</p>
+            <p className="text-3xl font-bold text-[#45b3e7] mb-4">$0</p>
+            <ul className="text-sm text-gray-600 space-y-1 mb-6">
+              <li>✓ 3 free conversions/month</li>
+              <li>✓ Basic OCR accuracy</li>
+              <li>✓ Limited export formats</li>
+            </ul>
+            <Link href="/pricing" className="inline-block bg-[#45b3e7] text-white px-4 py-2 rounded hover:bg-[#349aca]">Get Started</Link>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-md border-2 border-[#e77945] p-6 text-center">
+            <h3 className="text-[#e77945] font-bold text-lg mb-2">Pro</h3>
+            <p className="text-sm text-gray-600 mb-4">For frequent users and businesses</p>
+            <p className="text-3xl font-bold text-[#45b3e7] mb-4">$19/mo</p>
+            <ul className="text-sm text-gray-600 space-y-1 mb-6">
+              <li>✓ Unlimited conversions</li>
+              <li>✓ High-accuracy OCR</li>
+              <li>✓ Export to CSV, Excel, JSON</li>
+              <li>✓ Priority support</li>
+            </ul>
+            <Link href="/pricing" className="inline-block bg-[#e77945] text-white px-4 py-2 rounded hover:bg-[#d46632]">Upgrade to Pro</Link>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-md p-6 text-center">
+            <h3 className="text-[#e77945] font-bold text-lg mb-2">Enterprise</h3>
+            <p className="text-sm text-gray-600 mb-4">Custom needs? We've got you.</p>
+            <p className="text-2xl font-bold text-[#45b3e7] mb-4">Contact Us</p>
+            <ul className="text-sm text-gray-600 space-y-1 mb-6">
+              <li>✓ API Access</li>
+              <li>✓ Team workflows</li>
+              <li>✓ SLA & compliance</li>
+              <li>✓ Dedicated support</li>
+            </ul>
+            <Link href="/pricing" className="inline-block bg-[#45b3e7] text-white px-4 py-2 rounded hover:bg-[#349aca]">Request a Demo</Link>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="bg-white py-20 px-6 md:px-20">
         <h2 className="text-3xl font-extrabold text-center text-[#e77945] mb-12">Frequently Asked Questions</h2>
@@ -110,15 +164,15 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-10 px-10 text-sm text-gray-600 border-t flex flex-col md:flex-row justify-between items-center">
+      <footer className="py-10 px-10 text-sm text-gray-600 border-t mt-16 flex flex-col md:flex-row justify-between items-center">
         <div className="flex items-center gap-2">
           <Image src="/logo.svg" alt="Logo" width={24} height={24} />
           <span className="font-bold text-black">ConvertBankStatement</span>
         </div>
         <div className="flex gap-6 text-xs mt-4 md:mt-0">
-          <a href="#">Pricing</a>
-          <a href="#">FAQ</a>
-          <a href="#">Terms</a>
+          <Link href="/pricing">Pricing</Link>
+          <Link href="/faq">FAQ</Link>
+          <Link href="/terms">Terms</Link>
           <a href="mailto:info@convertbankstatement.io">Contact Us</a>
         </div>
       </footer>
