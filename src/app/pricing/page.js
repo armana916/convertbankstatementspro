@@ -23,8 +23,8 @@ export default function Pricing() {
   };
 
   return (
-    <section className="text-center px-4 sm:px-8 py-12">
-      <h2 className="text-3xl font-bold text-gray-900 mb-6">Pricing</h2>
+    <section className="text-center px-4 sm:px-6 md:px-10 lg:px-20 py-16 bg-white">
+      <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-8">Pricing</h2>
 
       {/* Toggle */}
       <div className="inline-flex rounded-md shadow-sm border border-gray-300 mb-10 overflow-hidden">
@@ -46,12 +46,12 @@ export default function Pricing() {
         </button>
       </div>
 
-      {/* Plans Grid */}
-      <div className="grid md:grid-cols-5 gap-6">
+      {/* Plans */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
         {plans[billingCycle].map((plan, idx) => (
           <div
             key={idx}
-            className={`rounded-lg border ${
+            className={`rounded-xl border ${
               plan.popular ? 'bg-[#f0faff] border-[#45b3e7] shadow-md' : 'bg-white border-gray-200'
             } p-6 flex flex-col justify-between`}
           >
@@ -82,7 +82,7 @@ export default function Pricing() {
       </div>
 
       {/* Custom Plan */}
-      <div className="text-center mt-10">
+      <div className="text-center mt-12">
         <p className="text-lg font-medium text-gray-800">Need a custom plan?</p>
         <p className="text-sm text-gray-500 mb-2">
           We offer custom enterprise plans with higher limits and dedicated support.
