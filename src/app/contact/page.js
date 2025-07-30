@@ -22,8 +22,8 @@ export default function ContactPage() {
       <h1 className="text-4xl font-extrabold text-[#45b3e7] text-center mb-4">Contact Us</h1>
       <p className="text-center text-sm text-gray-600 mb-10">
         Have questions, feedback, or support needs? Reach out to us using the form below or email us at{' '}
-        <a href="mailto:info@convertbankstatement.io" className="text-[#e77945] underline">
-          info@convertbankstatement.io
+        <a href="mailto:info@convertbankstatementspro.com" className="text-[#e77945] underline">
+          info@convertbankstatementspro.com
         </a>.
       </p>
 
