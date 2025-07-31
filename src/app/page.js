@@ -118,7 +118,7 @@ export default function HomePage() {
           </div>
           <div className="bg-white rounded-lg shadow-md p-6 text-center">
             <h3 className="text-[#e77945] font-bold text-lg mb-2">Enterprise</h3>
-            <p className="text-sm text-gray-600 mb-4">Custom needs? We've got you.</p>
+            <p className="text-sm text-gray-600 mb-4">Custom needs? We&apos;ve got you.</p>
             <p className="text-2xl font-bold text-[#45b3e7] mb-4">Contact Us</p>
             <ul className="text-sm text-gray-600 space-y-1 mb-6">
               <li>✓ API Access</li>
